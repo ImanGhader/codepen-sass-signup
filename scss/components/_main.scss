@@ -1,0 +1,141 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+	box-sizing: border-box;
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+
+body{
+ /* background-color:#292B2C;*/
+ font-family: 'Open Sans', sans-serif;
+}
+
+a{
+	outline: 0;
+	text-decoration: none;
+}
+.modal-bg{
+	position:fixed;
+	left:0;right:0;
+	top:0;bottom:0;
+	z-index:100;
+	background-color: rgba(0,177,182,0.8);
+}
+
+.sign-in{
+	@include button($lightteal, $lightteal, $mediumteal, $mediumteal);
+	position:relative;
+	float:right;
+	margin:50px 70px;
+ 	-webkit-transition:margin 100ms;
+	-moz-transition:margin 100ms;
+	transition:margin 100ms ;	
+	&:active{
+   		margin: 53px 70px;
+   	}
+}
+
+form{
+	display:block;
+	margin:20px;
+}
+
+
+.input{
+	font-size: 15px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	width: 300px;
+	padding: 17px;
+	border: 3px solid #00B1B6;
+	&:focus {
+		border: 3px solid #EE4340;
+  		outline:0;
+	}
+}
+
+button{
+	@include button($lightteal, $lightteal, $mediumteal, $mediumteal);
+	float: right;
+	&:hover {
+		background-color: transparent;
+
+	}
+}
+
+#forgot-link{
+	font-size: 14px;
+	line-height: 45px;
+	color: $lightteal;
+	display: inline-block;
+	&:hover { 
+		color: $mediumteal;
+	}
+}
+
+#modal{ 
+	position:absolute;
+	background-color:#F5F5F6;
+	top:50%; 
+	left:50%;
+	z-index:101;
+	border-radius:3px;
+	width:340px;
+	height:240px;
+	margin-top:-130px;
+	margin-left:-170px;
+	border-bottom: 3px solid $mediumteal;
+	box-shadow:0 0 10px 0 rgba(0,0,0,0.3);
+}
+
+
+/* Activate if you want a title for the pop-up box,
+#modal span{
+	display: block;
+	background:#5DC3A7;
+	padding: 10px;
+	color:#fff;
+	border-radius:3px;}*/
+
+#close{
+	float: right;
+	color: $lightteal;
+	font-size: 25px;
+	margin: 5px 20px 5px 0;
+	&:hover{
+		color: $mediumteal;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
